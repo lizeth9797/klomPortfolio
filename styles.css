@@ -295,7 +295,6 @@ opacity: 1;
 }
 @media(min-width:576px){ 
     .home{
-        background-color: plum;
         margin-top: 1rem;
     }
     .typewriterPhone{
