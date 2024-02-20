@@ -1,0 +1,296 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    height: 100%;
+}
+/*scrollBar*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #FE83C6; 
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: #323232; 
+}
+.header{
+    background-color: #323232;
+    display: flex;
+    position: fixed;
+    /* left, right and top to positionate the header at the top and with 100 width*/
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+.logo{
+    width: 15%;
+    margin-left: 30px;
+    padding: 15px;
+}
+.navbar{
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 50px;
+}
+.navbar>a{
+    margin: 0 10px 0 10px;
+    position: relative;
+    text-decoration: none; /* avoid underline */
+    color: #FA4EAB;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 30px;
+}
+.navbar a::before{
+    content: ''; 
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #FFC4E1;
+    transition: .5s;
+}
+.navbar a:hover::before{
+    width: 100%; /* to underline all the text in 'a' */
+}
+
+.navbar a:hover{ 
+    color: #FFC4E1;
+}
+.home{
+    background-color: #FE83C6;
+    margin-top: 5rem;
+    /*padding: 150px 20px;*/
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-areas: 
+        "itsMe itsMe itsMe"
+        "shortDescrip shortDescrip klomCode"
+    ;*/
+}
+.typewriterBox{
+    display: flex;
+    justify-content: center;
+}
+.typewriter h1{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 80px;
+    color: #FFF2F9;
+    text-shadow: 5px 5px #323232;
+    /* typing effect*/
+    overflow: hidden; /* content is not revealed until the animation */
+    border-right: 5px solid #FFC4E1; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 12px; 
+    -webkit-animation: typing 3.5s steps(30, end), blink-caret .5s step-end infinite;
+    animation: 
+      typing 3.5s steps(30,end),
+      blink-caret .5s step-end infinite;
+}
+/* typing effect */
+@keyframes typing {
+from { width: 0 }
+to { width: 100% }
+}
+/* typewriter cursor effect */
+@keyframes blink-caret {
+from, to { border-color: #FFF2F9 }
+50% { border-color: #FFC4E1; }
+}
+.homeContainer{
+    display: flex;
+    margin-top: 30px;
+}
+.shortDescrip{
+   width: 60%;
+   font-family: "Dosis", sans-serif;
+   font-size: 25px;
+   letter-spacing: 2px;
+   color: #FFF2F9;
+   padding: 50px 80px;
+}
+.bold{
+    font-size: 28px ;
+    color: #323232;
+}
+.klomCode{
+    width: 40%;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-right: 80px;
+}
+.mouse{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+}
+.mouse img{
+    width: 50px;
+}
+.aboutMe{
+    background-color: #323232;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 80px 50px;
+    height: 60%;
+}
+/*animation profilePicture*/
+.profilePic {
+    position: relative;
+    width: 200px;
+    height: 250px;
+}
+.photo {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 250px;
+    width: 200px;
+    opacity: 0;
+    transition: 1s ease;
+}
+.profilePic:hover .overlay {
+opacity: 1;
+} 
+.photoAdventure {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%; 
+    border-radius: 5px;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+/* ends animation profilePicture*/
+
+.description{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+.description h2{
+    color: #FA4EAB;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 45px;
+    text-align: center;
+}
+.description p{
+    color: #FFF2F9;
+    font-family: "Dosis", sans-serif;
+    margin: 20px 25px 30px 25px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-align: justify;
+}
+.description button{
+    padding: 8px 50px;
+    text-align: center;
+    align-self: center;
+    margin-bottom: 20px;
+    background-color: #EAEAEA;
+    color: #FE83C6;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 28px;
+    border-radius: 5px;
+    border:none;
+
+}
+.projects{
+    background-color: #000000;
+}
+.projects h2{
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 45px;
+    text-align: center;
+}
+.contact{
+    background-color: #000000;
+}
+.contact h2{
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 45px;
+    text-align: center;
+}
+
+
+/*celulares*/
+@media(min-width:576px){ /*Con este min decimos que de 576 a 767 tendrá este formato*/
+    .card-body {
+        margin-top: 200px;
+    }
+    .card-text {
+        min-height: 12vh;
+    }
+}
+@media(max-width:600px){  /*Con este maximo decimos que desde el mas pequeño hasta los 600px se respeta esta condición*/
+    .card-body {
+        margin-top: 200px;
+    }
+    .card-text {
+    min-height: 12vh;
+    }
+}
+/*tablet*/
+@media(min-width:768px){
+    .card-body {
+        margin-top: 130px;
+    }
+    .card-text {
+    min-height: 18vh;
+    }
+}
+/*escritorio*/
+@media(min-width:992px){
+    .card-body {
+        margin-top: 180px;
+    }
+    .card-text {
+    min-height: 12vh;
+    }
+}
+
+/*escritorio L*/
+@media(min-width:1440px){
+    .card-body {
+        margin-top: 250px;
+    }
+    .card-text {
+    min-height: 10vh;
+    }
+}
+
+    /*escritorio 4k*/
+    @media(min-width:2560px){
+    .card-body {
+        margin-top: 450px;
+    }
+    .card-text {
+    min-height: 7vh;
+    }
+}
