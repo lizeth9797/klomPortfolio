@@ -5,6 +5,7 @@
 }
 html,body{
     height: 100%;
+    width: 100%;
 }
 /*scrollBar*/
 ::-webkit-scrollbar {
@@ -68,18 +69,13 @@ html,body{
 .home{
     background-color: #FE83C6;
     margin-top: 5rem;
-    /*padding: 150px 20px;*/
     height: 100%; 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /*
-    display:grid;
-    grid-template-columns: auto;
-    grid-template-areas: 
-        "itsMe itsMe itsMe"
-        "shortDescrip shortDescrip klomCode"
-    ;*/
+}
+.typewriterPhone{
+    display: none;
 }
 .typewriterBox{
     display: flex;
@@ -217,7 +213,6 @@ opacity: 1;
     font-size: 28px;
     border-radius: 5px;
     border:none;
-
 }
 .projects{
     background-color: #000000;
@@ -240,57 +235,252 @@ opacity: 1;
 
 
 /*celulares*/
-@media(min-width:576px){ /*Con este min decimos que de 576 a 767 tendrá este formato*/
-    .card-body {
-        margin-top: 200px;
+@media(max-width:600px){  
+    .home{
+        margin-top: 1rem;
     }
-    .card-text {
-        min-height: 12vh;
+    .typewriterPhone{
+        display: block;
+    }
+    .typewriterNormal{
+        display: none;
+    }
+    .typewriter h1{
+        font-size: 30px;
+        text-shadow: 2px 2px #323232;
+    }
+    .homeContainer{
+        flex-direction: column;
+        margin-top: 50px;
+    }
+    .shortDescrip{
+        font-size: 20px;
+        letter-spacing:0;
+        text-align: justify;
+        padding: 10px;
+        align-self: center;
+    }
+    .bold{
+        font-size: 21px;
+    }
+    .klomCode{
+        width: 80%;
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .mouse{
+        display: none;
+    }
+    .aboutMe{
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 50px 0;
+        height: 100%;
+    }
+    .description{
+        width: 90%;
+    }
+    .description p{
+        font-size: 19px;
+        letter-spacing: 0;
+    }
+    .description h2{
+        margin-top: 50px;
+    }
+    .description button{
+        padding: 5px 30px;
+        font-size: 25px;
     }
 }
-@media(max-width:600px){  /*Con este maximo decimos que desde el mas pequeño hasta los 600px se respeta esta condición*/
-    .card-body {
-        margin-top: 200px;
+@media(min-width:576px){ 
+    .home{
+        background-color: plum;
+        margin-top: 1rem;
     }
-    .card-text {
-    min-height: 12vh;
+    .typewriterPhone{
+        display: block;
     }
-}
+    .typewriterNormal{
+        display: none;
+    }
+    .typewriter h1{
+        font-size: 30px;
+        text-shadow: 2px 2px #323232;
+    }
+    .homeContainer{
+        flex-direction: column;
+        margin-top: 50px;
+    }
+    .shortDescrip{
+        font-size: 20px;
+        letter-spacing:0;
+        text-align: justify;
+        padding: 10px;
+        align-self: center;
+    }
+    .bold{
+        font-size: 21px;
+    }
+    .klomCode{
+        width: 80%;
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .mouse{
+        display: none;
+    }
+    .aboutMe{
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 50px 0;
+        height: 100%;
+    }
+    .description{
+        width: 90%;
+    }
+    .description p{
+        font-size: 19px;
+        letter-spacing: 0;
+    }
+    .description h2{
+        margin-top: 50px;
+    }
+    .description button{
+        padding: 5px 30px;
+        font-size: 25px;
+        background-color: white;
+    }
+}/*celulares*/
+
+
 /*tablet*/
 @media(min-width:768px){
-    .card-body {
-        margin-top: 130px;
+    .home{
+        margin-top: 5rem;
     }
-    .card-text {
-    min-height: 18vh;
+    .typewriterPhone{
+        display: none;
+    }
+    .typewriterNormal{
+        display: block;
+    }
+    .typewriter h1{
+        font-size: 55px;
+        text-shadow: 4px 4px #323232;
+    }
+    .homeContainer{
+        flex-direction: row;
+    }
+    .shortDescrip{
+       font-size: 22px;
+       letter-spacing: 2px;
+       text-align: start;
+       padding: 50px 80px;
+    }
+    .bold{
+        font-size: 25px;
+    }
+    .klomCode{
+        width: 250px;
+        height: 150px;
+        margin-right: 80px;
+    }
+    .mouse{
+        display: block;
+    }
+    .aboutMe{
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 80px 50px;
+        height: 60%;
+    }
+    .description{
+        width: 60%;
+    }
+    .description h2{
+        margin-top: 0; 
+    }
+    .description p{
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+    .description button{
+        padding: 5px 30px;
+        font-size: 25px;
     }
 }
 /*escritorio*/
 @media(min-width:992px){
-    .card-body {
-        margin-top: 180px;
+    .home{
+        margin-top: 5rem;
     }
-    .card-text {
-    min-height: 12vh;
+    .typewriterPhone{
+        display: none;
+    }
+    .typewriterNormal{
+        display: block;
+    }
+    .typewriter h1{
+        font-size: 80px;
+        text-shadow: 5px 5px #323232;
+    }
+    .homeContainer{
+        flex-direction: row;
+    }
+    .shortDescrip{
+       font-size: 25px;
+       letter-spacing: 2px;
+       text-align: start;
+       padding: 50px 80px;
+    }
+    .bold{
+        font-size: 28px;
+    }
+    .klomCode{
+        width: 40%;
+        margin-right: 80px;
+    }
+    .mouse{
+        display: block;
+    }
+    .aboutMe{
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 80px 50px;
+        height: 60%;
+    }
+    .description{
+        width: 60%;
+    }
+    .description h2{
+        margin-top: 0; 
+    }
+    .description p{
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+    .description button{
+        padding: 8px 50px;
+        font-size: 28px;
     }
 }
 
-/*escritorio L*/
+
+/*
+
 @media(min-width:1440px){
-    .card-body {
-        margin-top: 250px;
-    }
-    .card-text {
-    min-height: 10vh;
+    .home{
+        background-color: blue;
     }
 }
 
-    /*escritorio 4k*/
-    @media(min-width:2560px){
-    .card-body {
-        margin-top: 450px;
-    }
-    .card-text {
-    min-height: 7vh;
-    }
+@media(min-width:2560px){
+.card-body {
+    margin-top: 450px;
 }
+.card-text {
+min-height: 7vh;
+}
+} */
